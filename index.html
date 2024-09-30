@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A LITTLE SURPRISE FOR MY MUFFIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, black, darkred); /* Gradient background */
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
+        }
+
+        h1, blockquote, .motivation {
+            margin: 20px 0;
+            opacity: 0; /* Start hidden for animation */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
+
+        h1 {
+            animation-delay: 0.5s; /* Delay for title */
+            animation: fadeIn 1s forwards, bounce 1s infinite alternate; /* Adding bounce */
+        }
+
+        blockquote {
+            font-style: italic;
+            animation-delay: 1s; /* Delay for quote */
+        }
+
+        .motivation {
+            font-size: 1.2em; /* Slightly larger font for motivation */
+            animation-delay: 1.5s; /* Delay for motivation message */
+        }
+
+        .additional-motivation {
+            font-size: 1.2em; /* Slightly larger font for additional motivation */
+            opacity: 0;
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+            animation-delay: 2s; /* Delay for additional motivation */
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            width: 200px; /* Adjust width as needed */
+            margin: 10px;
+            border-radius: 10px; /* Optional: add rounded corners */
+            opacity: 0; /* Start hidden for animation */
+            animation: slideIn 0.5s forwards; /* Slide-in animation */
+        }
+
+        .slide-in {
+            animation-delay: 2.5s; /* Delay for images */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop aria-label="Background music">
+        <source src="all i am.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag. 
+        <a href="all i am.mp3" download>Download the audio</a>
+    </audio>
+    
+    <div class="container">
+        <h1 class="fade-in">A Special Place for My Love</h1>
+        <blockquote class="fade-in">"No matter what problems we face, we will face them together."</blockquote>
+        <div class="motivation fade-in">I am always here for you, my love. You are never alone.</div>
+        <div class="additional-motivation fade-in">Together, we can overcome anything. Your strength inspires me every day!</div>
+        <div class="image-gallery">
+            <img src="muffin1.jpg" alt="Your Girlfriend's Picture 1" class="slide-in">
+            <img src="muffin2.jpg" alt="Your Girlfriend's Picture 2" class="slide-in">
+            <img src="muffin3.jpg" alt="Your Girlfriend's Picture 3" class="slide-in">
+            <img src="muffin4.jpg" alt="Your Girlfriend's Picture 4" class="slide-in">
+        </div>
+    </div>
+</body>
+</html>
